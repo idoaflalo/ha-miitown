@@ -1,0 +1,10 @@
+{
+  "name": "SamsungTV Smart",
+  "content_in_root": false,
+  "render_readme": true,
+  "domains": [
+    "device-tracker"
+  ],
+  "iot_class": "cloud_poll",
+  "homeassistant": "2022.5.0"
+}
