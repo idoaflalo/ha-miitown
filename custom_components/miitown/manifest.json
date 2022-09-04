@@ -1,0 +1,14 @@
+{
+  "domain": "miitown",
+  "name": "Miitown",
+  "config_flow": true,
+  "documentation": "https://www.home-assistant.io/integrations/miitown",
+  "codeowners": [
+    "@idoaflalo"
+  ],
+  "requirements": [],
+  "iot_class": "cloud_polling",
+  "loggers": [
+    "miitown"
+  ]
+}
