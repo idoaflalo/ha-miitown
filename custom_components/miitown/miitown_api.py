@@ -1,7 +1,6 @@
 import aiohttp
-import threading
 
-import http_helper as http_client
+from .http_helper import get, post
 from .const import BASE_URL, LOGIN_PATH, DEVICES_PATH, STATUS_PATH, REFRESH_TOKEN_INTERVAL
 from .utils import format_devices, handle_response, AuthError
 
@@ -17,14 +16,14 @@ class MiitownApi:
             "password": password,
             "rememberMe": False
         }
-        login_response = await http_client.post(self._session, BASE_URL + LOGIN_PATH, login_body)
+        login_response = await post(self._session, BASE_URL + LOGIN_PATH, login_body)
         handle_response(login_response)
 
         self._authorization = login_response["data"]
         return login_response["data"]
 
     async def fetch_devices(self) -> list[dict]:
-        devices_response = await http_client.get(self._session, BASE_URL + DEVICES_PATH, {
+        devices_response = await get(self._session, BASE_URL + DEVICES_PATH, {
             "token": self._get_token()
         })
         handle_response(devices_response)
@@ -32,7 +31,7 @@ class MiitownApi:
         return devices_response["data"]
 
     async def fetch_devices_data(self, devices) -> list[dict]:
-        devices_response = await http_client.get(self._session, BASE_URL + STATUS_PATH, {
+        devices_response = await get(self._session, BASE_URL + STATUS_PATH, {
             "token": self._get_token()
         })
         handle_response(devices_response)
