@@ -19,7 +19,6 @@ from homeassistant.helpers.typing import ConfigType
 
 from .const import (
     CONF_DRIVING_SPEED,
-    CONF_DEVICES,
     DOMAIN,
 )
 from .coordinator import MiitownDataUpdateCoordinator

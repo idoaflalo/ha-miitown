@@ -75,7 +75,7 @@ def format_devices(devices: list[dict], device_metas: list[dict]):
                     device["battery"] = 100
 
             if should_break:
+                new_devices.append(device)
                 break
-            new_devices.append(device)
 
         return new_devices

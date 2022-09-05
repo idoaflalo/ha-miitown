@@ -9,7 +9,6 @@ LOGGER = logging.getLogger(__package__)
 ATTRIBUTION = "Data provided by miitown.com"
 SPEED_DIGITS = 1
 UPDATE_INTERVAL = timedelta(seconds=10)
-REFRESH_TOKEN_INTERVAL = timedelta(days=1).total_seconds()
 
 ATTR_IMEI = "imei"
 ATTR_IS_CONNECTED = "is_connected"
@@ -22,7 +21,6 @@ ATTR_SATELLITES = "satellites"
 
 CONF_AUTHORIZATION = "authorization"
 CONF_DRIVING_SPEED = "driving_speed"
-CONF_DEVICES = "devices"
 
 DEFAULT_OPTIONS = {
     CONF_DRIVING_SPEED: None,

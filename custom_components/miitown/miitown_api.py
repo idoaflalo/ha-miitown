@@ -1,7 +1,7 @@
 import aiohttp
 
 from .http_helper import get, post
-from .const import BASE_URL, LOGIN_PATH, DEVICES_PATH, STATUS_PATH, REFRESH_TOKEN_INTERVAL
+from .const import BASE_URL, LOGIN_PATH, DEVICES_PATH, STATUS_PATH
 from .utils import format_devices, handle_response, AuthError
 
 
