@@ -22,7 +22,7 @@ from .const import (
     CONF_DEVICES,
     DOMAIN,
 )
-from .coordinator import MiitownDataUpdateCoordinator, MissingLocReason
+from .coordinator import MiitownDataUpdateCoordinator
 
 PLATFORMS = [Platform.DEVICE_TRACKER]
 
