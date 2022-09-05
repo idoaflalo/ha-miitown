@@ -78,4 +78,4 @@ def format_devices(devices: list[dict], device_metas: list[dict]):
                 new_devices.append(device)
                 break
 
-        return new_devices
+    return new_devices
