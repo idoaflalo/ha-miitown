@@ -7,10 +7,10 @@ class AuthError(Exception):
 
 
 def handle_response(response: Union[dict, list]) -> None:
-    code = response.get("code")
-    if type(response) == list or code == 200:
+    code = str(response.get("code"))
+    if type(response) == list or code == "200":
         return
-    elif code == -401 or code == -404:
+    elif code == "-401" or code == "-404":
         raise AuthError("Token is invalid")
     raise Exception(response["message" if response.get("message") else "msg"])
 
