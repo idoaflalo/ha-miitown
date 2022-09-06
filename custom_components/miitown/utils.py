@@ -69,8 +69,8 @@ def format_devices(devices: list[dict], device_metas: list[dict]):
                 device["isLowPower"] = False
                 if meta["power"]["po"] != 1:
                     device["battery"] = battery_parse(meta["power"]["inside"])
-                if device["battery"] <= 20:
-                    device["isLowPower"] = True
+                    if device["battery"] <= 20:
+                        device["isLowPower"] = True
                 else:
                     device["battery"] = 100
 
